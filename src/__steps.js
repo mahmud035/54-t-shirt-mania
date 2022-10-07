@@ -12,7 +12,7 @@
 
 /* 
 //* Context API
-1. declare a context variable and export it
-2. set provider with value
+1. declare a context variable using createContext() and export it
+2. set provider with value [single value, object, array ] anything
 3. useContext in the place where you want to get the context
 */
