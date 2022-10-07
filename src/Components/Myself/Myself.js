@@ -1,7 +1,7 @@
 import React from 'react';
 import SpecialOne from '../SpecialOne/SpecialOne';
 
-const Myself = ({ house, ring }) => {
+const Myself = ({ house }) => {
   return (
     <div>
       <h2>Myself</h2>
@@ -10,7 +10,7 @@ const Myself = ({ house, ring }) => {
       </p>
 
       <section>
-        <SpecialOne ring={ring}></SpecialOne>
+        <SpecialOne></SpecialOne>
       </section>
     </div>
   );
