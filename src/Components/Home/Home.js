@@ -8,10 +8,21 @@ const Home = () => {
   const tshirts = useLoaderData();
   const [cart, setCart] = useState([]);
 
-  const handleAddToCart = (tshirt) => {
-    console.log('add to cart clicked', tshirt);
-    const newCart = [...cart, tshirt];
-    setCart(newCart);
+  const handleAddToCart = (tshirt, _id) => {
+    const exists = cart.find((item) => item._id === _id);
+    if (exists) {
+      alert('Already exists');
+      return;
+    } else {
+      const newCart = [...cart, tshirt];
+      setCart(newCart);
+      // alert('Successfully added');
+    }
+  };
+
+  const handleRemoveItem = (_id) => {
+    const remaining = cart.filter((item) => item._id !== _id);
+    setCart(remaining);
   };
 
   return (
@@ -27,7 +38,7 @@ const Home = () => {
       </div>
 
       <div className="cart-container">
-        <Cart cart={cart}></Cart>
+        <Cart cart={cart} handleRemoveItem={handleRemoveItem}></Cart>
       </div>
     </div>
   );
