@@ -1,0 +1,13 @@
+.home-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.t-shirt-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  width: 85%;
+  margin-inline: auto;
+  margin-top: 3rem;
+}
